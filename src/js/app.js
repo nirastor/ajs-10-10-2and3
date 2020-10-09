@@ -11,7 +11,6 @@ export default class App {
         const loaded = await read();
         resultData = await json(loaded);
         console.log(resultData);
-        return resultData;
       } catch (e) {
         console.log(`Errors here: ${e}`);
       } finally {
