@@ -4,8 +4,8 @@ import read from './reader';
 
 export default class App {
   static init() {
+    let resultData;
     (async () => {
-      let resultData;
       try {
         console.log('index.js started');
         const loaded = await read();
@@ -17,7 +17,8 @@ export default class App {
       } finally {
         console.log('Print something');
       }
-      return resultData;
+      return false;
     })();
+    return resultData;
   }
 }
