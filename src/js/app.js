@@ -4,13 +4,12 @@ import read from './reader';
 
 export default class App {
   static init() {
-    // eslint-disable-next-line consistent-return
     (async () => {
-      // let resultData;
+      let resultData;
       try {
         console.log('index.js started');
         const loaded = await read();
-        const resultData = await json(loaded);
+        resultData = await json(loaded);
         console.log(resultData);
         return resultData;
       } catch (e) {
@@ -18,7 +17,7 @@ export default class App {
       } finally {
         console.log('Print something');
       }
-      // return resultData;
+      return resultData;
     })();
   }
 }
