@@ -9,7 +9,8 @@ beforeEach(() => {
 
 // test with mock
 test('should be rejected', async () => {
-  read.mockRejectedValue(new Error('Some test error'));
+  const err = new Error('Some test error');
+  read.mockRejectedValue(err);
   const recived = await GameSavingLoader.load();
-  expect(recived).rejects.toThrow('Some test error');
+  expect(recived).toEqual(err);
 });
