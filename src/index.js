@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
 import './css/style.css';
-import App from './js/app';
+import GameSavingLoader from './js/GameSavingLoader';
 
-App.init();
+console.log(GameSavingLoader.load());
